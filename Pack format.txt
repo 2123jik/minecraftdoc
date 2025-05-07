@@ -1,0 +1,31 @@
+包格式[编辑 | 编辑源代码]
+有关所有版本中完整的包格式列表，请参见包格式 § 数据包格式列表。
+
+
+/locate 命令现在将配置的结构作为其第一个参数，而不是结构类型，因此许多分组结构现在需要一个结构类型标签。例如，/locate village 现在变成了/locate #village。
+10 1.19 – 1.19.3
+数据包格式
+值 发布版本 [隐藏]重大/破坏性变更
+4 1.13 – 1.14.4
+添加了初始包格式版本 4。
+5 1.15 – 1.16.1
+添加谓词。
+6 1.16.2 – 1.16.5
+添加了对自定义世界生成的实验性支持。
+7 1.17 – 1.17.1
+/replaceitem 命令被 /item 命令替代。
+set_damage 战利品函数现在需要一个有效的 [String] 类型字段。
+8 1.18 – 1.18.1
+战利品表函数 set_contents 和 set_loot_table 现在需要一个[String]类型字段。
+移除了记分板、得分持有者和队伍名称的长度限制。
+9 1.18.2
+数据包现在可以在 pack.mcmeta 中包含[NBT 复合/JSON 对象]过滤器部分。
+将/locatebiome 与/locate 合并，改变了其语法。
+12 1.19.4
+添加了伤害类型。
+移除了伤害谓词中的所有布尔标志，现在可以测试伤害类型标签。
+生物群系字段 [String] precipitation 更改为 [Boolean] has_precipitation。
+15 1.20 – 1.20.1
+更改了告示牌 NBT。例如，Text1 现在变成了 front_text.messages[0]。
+placed_block、item_used_on_block 和 allay_drop_item_on_block 进度触发器中的所有字段都被合并为一个单一的 location 字段。
+将 alternative 谓词重命名为 any_of。
